@@ -1,12 +1,13 @@
 % \documentclass[dvipdfmx, 11pt]{beamer}
-\documentclass[aspectratio=169, dvipdfmx, 11pt]{beamer} % aspectratio=43, 149, 169
+\documentclass[aspectratio=169, dvipdfmx, 11pt, xcolor={usenames, dvipsnames}]{beamer} % aspectratio=43, 149, 169
 \usepackage{here, amsmath, latexsym, amssymb, bm, ascmac, mathtools, multicol, tcolorbox, subfig, url}
 \usepackage[absolute,overlay]{textpos}
 
 %デザインの選択(省略可)
-\usetheme{metropolis}
+\usetheme[sectionpage=none]{metropolis}
 %カラーテーマの選択(省略可)
 \usecolortheme{dolphin}
+\usecolortheme[RGB={222, 111, 161}]{structure}
 %フォントテーマの選択(省略可)
 \usefonttheme{professionalfonts}
 %フレーム内のテーマの選択(省略可)
@@ -28,8 +29,10 @@
 \setbeamercolor{title}{fg=structure, bg=}
 %フレームタイトル色
 \setbeamercolor{frametitle}{fg=structure, bg=}
+% プログレスバー 色
+\setbeamercolor{progress bar}{fg=structure}
 %スライド番号のみ表示
-%\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}[frame number]
 %itemize
 \setbeamertemplate{itemize item}{\small\raise0.5pt\hbox{$\bullet$}}
 \setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{$\blacktriangleright$}}
@@ -39,13 +42,11 @@
 \newcommand{\green}[1]{\textcolor{green!40!black}{#1}}
 \newcommand{\blue}[1]{\textcolor{blue!80!black}{#1}}
 
-\title[]{タイトル}
-\author[]{発表者}
+\title[]{title}
+\author[]{author}
 \date{\today}
 
 \begin{document}
-
-\metroset{sectionpage=none}
 
 \maketitle
 
@@ -60,7 +61,9 @@
 
 \begin{frame}{はじめに}
 	\begin{itemize}
-		\item ああああ
+		\item item 1
+		\item item 2
+		\item item 3
 	\end{itemize}
 \end{frame}
 
