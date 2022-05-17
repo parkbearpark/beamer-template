@@ -16,11 +16,7 @@
 \useoutertheme{infolines}
 %しおりの文字化け解消
 \usepackage{atbegshi}
-\ifnum 42146=\euc"A4A2
-\AtBeginShipoutFirst{\special{pdf:tounicode EUC-UCS2}}
-\else
-\AtBeginShipoutFirst{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
-\fi
+\AtBeginShipoutFirst{\special{pdf:tounicode UTF8-UTF16}}
 %ナビゲーションバー非表示
 \setbeamertemplate{navigation symbols}{}
 %既定をゴシック体に
@@ -95,6 +91,11 @@
 	\end{enumerate}
 \end{frame}
 
-
+\begin{frame}{参考文献}
+    \begin{thebibliography}{99}
+        \beamertemplatetextbibitems
+	\bibitem{sample-bibitem} aaa
+    \end{thebibliography}
+\end{frame}
 
 \end{document}
